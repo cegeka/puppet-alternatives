@@ -118,11 +118,13 @@ Puppet::Type.type(:alternative).provide(:rhel) do
     alternatives_file.shift
     while !alternatives_file.empty? do 
       slave_name = alternatives_file.shift.strip
-      if slave_name =~ /^$/m
-        break
-      end
+      break if slave_name =~ /^$/m
+
+      slave_path = fetch_slave_path(slave_paths, slave_name)
+      break if slave_path =~ /^[(]null[)]$/
+
       slave_link = alternatives_file.shift.strip
-      slave_path = fetch_slave_path(slave_paths, slave_name) 
+
       slave_hash = { 'link' => slave_link, 'name' => slave_name, 'path' => slave_path }
       slaveparams.push(slave_hash)
     end
