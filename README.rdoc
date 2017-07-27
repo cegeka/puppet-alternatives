@@ -1,5 +1,5 @@
 = puppet-alternatives module
 
-{<img src='https://codex.cegeka.be/jenkins/job/puppet-alternatives/badge/icon' />}[https://codex.cegeka.be/jenkins/job/puppet-alternatives/]
+{<img src='https://jenkins-iac.cegeka.be/job/puppet-alternatives/badge/icon' />}[https://jenkins-iac.cegeka.be/job/puppet-alternatives/]
 
 This is the alternatives module.
