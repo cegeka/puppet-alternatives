@@ -49,13 +49,11 @@ Puppet::Type.newtype(:alternative) do
       if current_array.size != should_array.size
         return false
       end
-      current_array.each_with_index do |item, index|
-        # Because hashes are not yet 'sorted' in ruby 1.8: call the sort method
-        # To convert to 'sorted' array:
-        if item.sort != should_array[index].sort
-          return false
-        end
+
+      current_array.each do |e|
+        return false unless @should.include?e
       end
+
       return true
     end
   end
