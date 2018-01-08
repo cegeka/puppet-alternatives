@@ -123,3 +123,4 @@ Contact
 
   * Source code: https://github.com/cegeka/puppet-alternatives
   * Issue tracker: https://github.com/cegeka/puppet-alternatives/issues
+
